@@ -1,11 +1,13 @@
 import React from 'react'
 import FormLogin from '../Components/FormLogin'
+import Evento from '../Components/Evento'
 
 function Login() {
   return (
 
     <div>
-        <FormLogin />    
+        <FormLogin />
+        <Evento />    
     </div>
   )
 }

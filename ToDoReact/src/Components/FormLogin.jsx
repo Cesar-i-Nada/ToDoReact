@@ -2,15 +2,21 @@ import React from 'react'
 import '../Styles/Login.css'
 
 function FormLogin() {
+  function Iniciar(){
+
+    console.log('logueado');
+
+  }
   return (
     <div>
       <label htmlFor="">Nombre</label>
-      <input type="text"/>
+      <input type="text"/><br /><br />
       <label htmlFor="">Contraseña</label>
-      <button>Iniciar</button>
-    <p>tres</p>
-  
-    </div>)
+      <input type="text" /><br /><br />
+      <button onClick={Iniciar} className='btnIniciar'>Iniciar</button>     
+    </div>
+    )
 }
+
 
 export default FormLogin
