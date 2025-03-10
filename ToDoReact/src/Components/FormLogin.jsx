@@ -8,8 +8,9 @@ function FormLogin() {
       <input type="text"/>
       <label htmlFor="">Contraseña</label>
       <button>Iniciar</button>
-    </div>
-  )
+    <p>tres</p>
+  
+    </div>)
 }
 
 export default FormLogin
