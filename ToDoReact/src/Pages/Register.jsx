@@ -6,6 +6,7 @@ function Register() {
   return (
     <div>
       <FormRegister />
+      <h1>hola</h1>
     </div>
   )
 }
