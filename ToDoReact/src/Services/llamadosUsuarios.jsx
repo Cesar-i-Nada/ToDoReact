@@ -19,7 +19,6 @@ async function getUsuarios() {
     }
 }
 
-export { getUsuarios };
 
 //////////LLAMADO POST//////////
 
@@ -49,7 +48,6 @@ async function postUsuarios(usuario,password,email) {
     }
 }
 
-export{postUsuarios}
 
 //////////////LLAMADO UPDATE/////////////
 
@@ -85,7 +83,6 @@ async function updateUsuarios(usuario,password,email,id)
     }
 }
 
-export{updateUsuarios}
 
 
 
@@ -112,4 +109,4 @@ async function deleteUsuarios(id) {
     }
 }
 
-export { deleteUsuarios };
+export default{ deleteUsuarios,getUsuarios,postUsuarios,updateUsuarios };

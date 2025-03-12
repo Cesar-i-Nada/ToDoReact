@@ -1,31 +1,31 @@
 import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../Styles/Register.css'
 import llamados from '../Services/llamadosUsuarios.jsx'
 
 function FormRegister() {
 
-const [nombreUsuario,SetNombreUsuario]=useState()
-const [passwordUsuario,SetPasswordUsuario]=useState()
-const [emailUsuario,SetEmailUsuario]=useState()
+const [nombreUsuario,  SetNombreUsuario] = useState()
+const [passwordUsuario, SetPasswordUsuario] = useState()
+const [emailUsuario, SetEmailUsuario] = useState()
 
+function nombre(evento) {
+ SetNombreUsuario(evento.target.value)
+}
 
-    function nombre(evento) {
-SetNombreUsuario(evento.target.value)
+function password(evento) {
+  SetPasswordUsuario(evento.target.value)
+}
 
-    }
+function email(evento) {
+  SetEmailUsuario(evento.target.value)
+}
 
-    function password(evento) {
-      SetPasswordUsuario(evento.target.value)
+function CrearRegistro() {
+  llamados.postUsuarios (nombreUsuario,passwordUsuario,emailUsuario)  
+}
       
-          }
-
-          function email(evento) {
-            SetEmailUsuario(evento.target.value)
-            
-                }
-      
-  return (
+return (
     <div>
       <label>Nombre</label>
       <input value={nombreUsuario} onChange={nombre} type="text"/><br /><br />
@@ -33,9 +33,10 @@ SetNombreUsuario(evento.target.value)
       <input value={passwordUsuario} onChange={password} type="text" /><br /><br />
       <label>email</label>
       <input value={emailUsuario} onChange={email} type="text"/><br /><br />
-      <button onClick={Registrar} className='btnRegistrar'>Registrarse</button>
+      <button onClick={CrearRegistro} className='btnRegistrar'>Registrarse</button>
+      <Link to={"/"}>Ir a Login</Link>
     </div>
-  )
-}
+  );
+};
 
 export default FormRegister

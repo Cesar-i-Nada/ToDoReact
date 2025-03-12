@@ -4,7 +4,7 @@ import '../Styles/Login.css'
 function FormLogin() {
   function Iniciar(){
 
-    console.log('logueado');
+  
 
   }
   return (
@@ -13,7 +13,7 @@ function FormLogin() {
       <input type="text"/><br /><br />
       <label htmlFor="">Contraseña</label>
       <input type="text" /><br /><br />
-      <button onClick={Iniciar} className='btnIniciar'>Iniciar</button>     
+      <button onClick={Iniciar} className='btnIniciar'>Iniciar</button>
     </div>
     )
 }
