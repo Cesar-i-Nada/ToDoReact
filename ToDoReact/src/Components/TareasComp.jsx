@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, } from 'react';
 import '../Styles/TareasComp.css';
+import llamadosUsuarios from '../Services/llamadosUsuarios';
 
 function TareasComp() {
   
@@ -8,7 +9,6 @@ function TareasComp() {
   const [EditarTarea,  SetEditar] = useState()
   const [EliminarTarea,  SetEliminar] = useState()
   const [TareasListas, SetImprimir] = useState()
-
 
   function NuevaTarea(evento) {
     SetIngresarTarea(evento.target.value)
@@ -30,8 +30,7 @@ function TareasComp() {
     SetImprimir(evento.target.value)
    }
 
-
-  
+   
 
 return (
   <div> {/*Este es un comentario. Abre el div principal */}
