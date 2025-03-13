@@ -1,6 +1,6 @@
 async function getTasks() {
     try {
-        const response = await fetch('http://localhost:3000/tasks', {
+        const response = await fetch('http://localhost:3000/Tasks', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -19,7 +19,6 @@ async function getTasks() {
     }
 }
 
-export { getTasks };
 
 //////////LLAMADO POST//////////
 
@@ -32,7 +31,7 @@ async function postTasks(Tarea) {
         
         };
 
-        const response = await fetch("http://localhost:3000/tasks", {
+        const response = await fetch("http://localhost:3000/Tasks", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -48,7 +47,6 @@ async function postTasks(Tarea) {
     }
 }
 
-export{postTasks}
 
 //////////////LLAMADO UPDATE/////////////
 
@@ -59,7 +57,8 @@ async function updateTasks(Tarea,id)
      
         const userData = { 
             
-            Tarea
+            Tarea,
+            id
         
         };
 
@@ -67,7 +66,7 @@ async function updateTasks(Tarea,id)
         
 
 
-        const response = await fetch("http://localhost:3000/tasks/"+id, {
+        const response = await fetch("http://localhost:3000/Tasks/"+id, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -83,7 +82,6 @@ async function updateTasks(Tarea,id)
     }
 }
 
-export{updateTasks}
 
 
 
@@ -92,7 +90,7 @@ export{updateTasks}
 
 async function deleteTasks(id) {
     try {
-        const response = await fetch(`http://localhost:3000/tasks/${id}`, {
+        const response = await fetch(`http://localhost:3000/Tasks/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -110,4 +108,4 @@ async function deleteTasks(id) {
     }
 }
 
-export { deleteTasks };
+    export default{ deleteTasks,postTasks,getTasks,updateTasks} ;
